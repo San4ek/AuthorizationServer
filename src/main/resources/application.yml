@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/authorization_server
+    username: root
+    password: Utermybest1
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+      ddl-auto: update
+    show-sql: true
+  main:
+    allow-bean-definition-overriding: true
+server:
+  port: 9000

@@ -1,0 +1,23 @@
+# curl http://localhost:9000/oauth2/authorize?response_type=code&client_id=taco-admin-client&redirect_uri=http://127.0.0.1:9090/login/oauth2/code/taco-admin-client&scope=writeIngredients+deleteIngredients
+GET http://localhost:9000/oauth2/authorize?response_type=code&client_id=taco-admin-client&redirect_uri=http://127.0.0.1:9090/login/oauth2/code/taco-admin-client&scope=writeIngredients+deleteIngredients
+
+###
+
+# curl localhost:9000/oauth2/token -H "Content_type: application/x-www-form-urlencoded" -d "grant_type=refresh_token&refresh_token=
+POST localhost:9000/oauth2/token
+Authorization: Basic taco-admin-client secret
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=refresh_token&refresh_token=Gm5tx7E8D6BdDi_pqoLnKSfH8XC5OIOVa6HTRkONgZUguyCqS4iXF7ZqDj5bK6pGUBmVtRhKLdkH50Iin7fs9y4ZfbIJrBY0IaiBcOXOkQofb2xyWGzTo-tvqgz6eadB
+
+###
+
+# curl 'localhost:9000/oauth2/token' -H "Content-type: application/x-www-form-urlencoded" -d "grant_type=authorization_code" -d "redirect_uri=http://127.0.0.1:9090/login/oauth2/code/taco-admin-client" -d "code=GQ8duGXOzlxAaF7VPMFTRxawvGsDBTr2U0XhfIgNdp0H6mKPCYNcddY58tRO48dWdIseRAEfVUW5HEIdENBzVrJCPlfwGYFL1rNCasYrmtbrQ2kzOM4znpiM7kQBRKbG" -u "taco-admin-client:secret"
+POST localhost:9000/oauth2/token
+Authorization: Basic taco-admin-client secret
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=authorization_code&redirect_uri=http://127.0.0.1:9090/login/oauth2/code/taco-admin-client&code=uE01vhnPvuO2PfXk39SWq_wMvl8TaM10eAbiqcKeRY-fENU2LwSLW3GL5TkQ6vnZ6LAacpETDDJj8tORIy0oJbdq6QHH68NakqokOgi6cmsE9TxY0_O90zppBbbcgxiB
+###
+
+
